@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        //methode guard des administrateur
+        'administrateur'  => [
+            'driver' => 'session',
+            'provider' => 'administrateurs',
+        ],
     ],
 
     /*
@@ -69,6 +74,11 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        //provider des administrateurs
+        'administrateurs' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Administrateurs::class),
+        ],
     ],
 
     /*
